@@ -8,8 +8,7 @@ Connection to ROS with matlab and teleop keys.
 
 
 
-
-
+![imagen tal](https://i.postimg.cc/zHpqHHZG/2022-04-06-19-05.png)
 
 
 ``` The value of the ROS_MASTER_URI environment variable, http://localhost:11311, will be used to connect to the ROS master.
