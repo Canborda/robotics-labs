@@ -6,9 +6,10 @@ Connection to ROS with matlab and teleop keys.
 - Camilo Andrés Borda
 - Edwin Alfredo Higuera
 
-## Procedimiento
+## Procedimiento 
+# Conexión Ros con Matlab
 
-Con Linux operando lanzar 2 terminales. En la primera terminal escribir el comando roscore
+- Con Linux operando lanzar 2 terminales. En la primera terminal escribir el comando roscore
 para iniciar el nodo maestro, en la segunda terminal escribir rosrun turtlesim turtlesim node, en este momento aparece la Tortuga tal y como se muestra en la siguiente imagen.
 
 <img src="images/console1.png" margin='auto' width="500" height="400">
@@ -34,7 +35,7 @@ Para finalizar se ejecuta la tercera y ultima sección del script, la cual activ
 
 
 
-A continuación se crea un script en Matlab llamado poseSubs.m, que permite suscribirse al tópico de pose de la simulación de turtle1.
+- A continuación se crea un script en Matlab llamado poseSubs.m, que permite suscribirse al tópico de pose de la simulación de turtle1.
 
 <img src="images/mat2.png" margin='auto' width="500" height="400">
 
@@ -44,7 +45,49 @@ A modo de verificación se ejecuta el comando rqt_graph en la terminal, donde se
 
 sin embargo, mas adelante se puede apreciar que el script poseSub.m es alterado buscando nuevas funcionalidades.
 
-Ahora se busca Crear un script en Matlab que permita enviar todos los valores asociados a la pose de turtle1.
+- Ahora se busca Crear un script en Matlab que permita enviar todos los valores asociados a la pose de turtle1.
+
+- Consultando la manera en qué se finaliza el nodo maestro en Matlab se hallo que esta acción se realiza mediante el comando:
+
+```matlab
+rosshutdown;
+```
+
+
+# Conexión Ros con Python
+
+- En el paquete hello turtle de ROS, en la carpeta de scripts, crear un script de Python y escribir un código que permita operar una tortuga del paquete turtlesim con el teclado, que
+cumpla con las siguientes especificaciones:
+
+    -  Se debe mover hacia adelante y hacia atrás con las teclas W y S
+    -  Debe girar en sentido horario y antihorario con las teclas D y A.
+    -  Debe retornar a su posición y orientación centrales con la tecla R
+    -  Debe dar un giro de 180° con la tecla ESPACIO
+
+<br>
+
+- Lanzar una terminal, dirigirse al directorio del workspace de catkin y escribir el comando
+catkin make para hacer build en el paquete modificado.
+- Con Linux operando lanzar 3 terminales. En la primera terminal escribir el comando roscore
+para iniciar el nodo maestro.
+- En la segunda terminal escribir rosrun turtlesim turtlesim node.
+- En la tercera terminal dirigirse al directorio que contiene el workspace de catkin y escribir
+source devel/setup.bash. Acto seguido escribir rosrun hello turtle turtle_TeleopKey.py. 
+
+
+<img src="images/console2.png" margin='auto' width="400" height="500">
+
+<br>
+En este punto, la terminal ya deberı́a estar esperando el ingreso de teclas.
+<br>
+
+<img src="images/tortuga2.png" margin='auto' width="400" height="400">
+
+- Observar el movimiento de la tortuga con las teclas A, S, W y D, ası́ como los cambios en la
+posición instantáneos con las teclas R y ESPACIO.
+
+<img src="images/tortuga3.png" margin='auto' width="400" height="400">
+
 
 <img src="images/rqt1.png" margin='auto' width="500" height="400">
 
