@@ -11,7 +11,7 @@ Connection to ROS with matlab and teleop keys.
 <p>Con Linux operando lanzar 2 terminales. En la primera terminal escribir el comando roscore
 para iniciar el nodo maestro. <br>En la segunda terminal escribir rosrun turtlesim turtlesim node, en este momento aparece la Tortuga tal y como se muestra en la siguiente imagen.</p>
 
-<img src="https://i.postimg.cc/zHpqHHZG/2022-04-06-19-05.png" width="500" height="500">
+<img src="https://i.postimg.cc/zHpqHHZG/2022-04-06-19-05.png" width="200" height="200">
 
 <p>A continuación se procede a lanzar una instancia de Matlab y se creo el script poseSub.m.</p>
 
