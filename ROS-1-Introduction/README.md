@@ -36,7 +36,15 @@ Para finalizar se ejecuta la tercera y ultima sección del script, la cual activ
 
 A continuación se crea un script en Matlab llamado poseSubs.m, que permite suscribirse al tópico de pose de la simulación de turtle1.
 
+<img src="images/mat2.png" margin='auto' width="500" height="400">
 
+A modo de verificación se ejecuta el comando rqt_graph en la terminal, donde se obtiene el siguente grafico, el cual nos muestra como el nodo solicita información al topico /turtle1/pose, el cual la devuelve a matlab.
+
+<img src="images/rqt2.png" margin='auto' width="500" height="400">
+
+sin embargo, mas adelante se puede apreciar que el script poseSub.m es alterado buscando nuevas funcionalidades.
+
+Ahora se busca Crear un script en Matlab que permita enviar todos los valores asociados a la pose de turtle1.
 
 <img src="images/rqt1.png" margin='auto' width="500" height="400">
 
