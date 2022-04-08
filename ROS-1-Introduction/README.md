@@ -11,7 +11,7 @@ Connection to ROS with matlab and teleop keys.
 <p>Con Linux operando lanzar 2 terminales. En la primera terminal escribir el comando roscore
 para iniciar el nodo maestro. <br>En la segunda terminal escribir rosrun turtlesim turtlesim node, en este momento aparece la Tortuga tal y como se muestra en la siguiente imagen.</p>
 
-![imagen tal](https://i.postimg.cc/zHpqHHZG/2022-04-06-19-05.png)
+<img src="https://i.postimg.cc/zHpqHHZG/2022-04-06-19-05.png" width="500" height="500">
 
 <p>A continuación se procede a lanzar una instancia de Matlab y se creo el script poseSub.m.</p>
 
@@ -19,7 +19,8 @@ para iniciar el nodo maestro. <br>En la segunda terminal escribir rosrun turtles
 
 <p>Al correr la primera sección nos hemos conectado al modo maestro de ROS, lo cual queda evidenciado con el siguiente mensaje en command Window de Matlab.</p>
 
-``` The value of the ROS_MASTER_URI environment variable, http://localhost:11311, will be used to connect to the ROS master.
+```
+The value of the ROS_MASTER_URI environment variable, http://localhost:11311, will be used to connect to the ROS master.
 Initializing global node /matlab_global_node_73140 with NodeURI http://eladark-Katana-GF66-11UC:39157/ and MasterURI http://localhost:11311.
 ```
 <p>Tras correr la segunda sección se puede apreciar la creación del Publisher y el Message, de la siguiente manera. </p>
