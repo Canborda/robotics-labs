@@ -7,7 +7,7 @@ Connection to ROS with matlab and teleop keys.
 - Edwin Alfredo Higuera
 
 ## Procedimiento 
-# Conexión Ros con Matlab
+## Conexión Ros con Matlab
 
 - Con Linux operando lanzar 2 terminales. En la primera terminal escribir el comando roscore
 para iniciar el nodo maestro, en la segunda terminal escribir rosrun turtlesim turtlesim node, en este momento aparece la Tortuga tal y como se muestra en la siguiente imagen.
@@ -39,7 +39,7 @@ Para finalizar se ejecuta la tercera y ultima sección del script, la cual activ
 
 <img src="images/mat2.png" margin='auto' width="500" height="400">
 
-A modo de verificación se ejecuta el comando rqt_graph en la terminal, donde se obtiene el siguente grafico, el cual nos muestra como el nodo solicita información al topico /turtle1/pose, el cual la devuelve a matlab.
+A modo de verificación se ejecuta el comando rqt_graph en la terminal, donde se obtiene el siguente grafico, el cual nos muestra como el nodo publica al topico /turtle1/pose, un tipo Pose, simultaneamente el nodo creado por matlab se suscribe al mismo topico para recibir el mensaje.
 
 <img src="images/rqt2.png" margin='auto' width="500" height="400">
 
@@ -47,14 +47,14 @@ sin embargo, mas adelante se puede apreciar que el script poseSub.m es alterado 
 
 - Ahora se busca Crear un script en Matlab que permita enviar todos los valores asociados a la pose de turtle1.
 
-- Consultando la manera en qué se finaliza el nodo maestro en Matlab se hallo que esta acción se realiza mediante el comando:
+- Consultando la manera en qué se finaliza el nodo maestro en Matlab se halló que esta acción se realiza mediante el comando:
 
 ```matlab
 rosshutdown;
 ```
+Esto es necesario por que matlab solo puede tener un nodo instanciado a la vez.
 
-
-# Conexión Ros con Python
+## Conexión Ros con Python
 
 - En el paquete hello turtle de ROS, en la carpeta de scripts, crear un script de Python y escribir un código que permita operar una tortuga del paquete turtlesim con el teclado, que
 cumpla con las siguientes especificaciones:
@@ -89,5 +89,13 @@ posición instantáneos con las teclas R y ESPACIO.
 <img src="images/tortuga3.png" margin='auto' width="400" height="400">
 
 
+
 <img src="images/rqt1.png" margin='auto' width="500" height="400">
 
+## Conclusiones:
+
+- La principal ventaja de ROS se encuentra en permite una amplia integración entre diferentes sistemas y aplicaciones, lo que permite formar elaborados mecanismos roboticos con amplia variedad de ocupaciones. 
+
+- Ros al ser un framework de codigo abierto se convierte de una gran comunidad de desarrolladores, que a tambien nutren el sistema con una gran variedad de librerias y repositorios no oficiales.
+
+- Ros cuenta con una amplia documentación que permite desembolverse practicamente ante cualquier problema.
