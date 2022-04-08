@@ -3,7 +3,7 @@
   <!-- Turtle simulation node -->
   <node
     pkg="turtlesim" 
-    name="tutle_simulation" 
+    name="turtle_simulation" 
     type="turtlesim_node">
   </node>
 
