@@ -55,3 +55,13 @@ def calcMTH(x, y, z, theta):
 
     
 calcMTH(120, 120, 30, np.pi)
+
+def intervalo(x1, x2, step1):
+    interv = np.linspace(x1, x2, step1)
+    print(interv)
+
+    return interv
+
+intervalo(7, 25, 8)
+
+
