@@ -7,6 +7,107 @@ from roboticstoolbox import *
 from spatialmath.pose3d import *
 from spatialmath.base import *
 
+POSITION = {
+    '1': {
+        'x': 0,
+        'y': 14,
+        'z': 1,
+        'theta':np.pi,
+        'gripper' : 'false',
+    },
+    '2': {
+        'x': 0,
+        'y': 14,
+        'z': 1,
+        'theta':np.pi,
+        'gripper' : 'true',
+    },
+    '3': {
+        'x': 0,
+        'y': 14,
+        'z': 10,
+        'theta':np.pi,
+        'gripper' : 'true',
+    },
+    '4': {
+        'x': 14,
+        'y': 0,
+        'z': 10,
+        'theta':np.pi,
+        'gripper' : 'true',
+    },
+    '5': {
+        'x': 14,
+        'y': 0,
+        'z': 3,
+        'theta':np.pi,
+        'gripper' : 'true',
+    },
+    '6': {
+        'x': 14,
+        'y': 0,
+        'z': 3,
+        'theta':np.pi,
+        'gripper' : 'false',
+    },
+    '7': {
+        'x': 14,
+        'y': 0,
+        'z': 10,
+        'theta':np.pi,
+        'gripper' : 'false',
+    },
+    '8': {
+        'x': 0,
+        'y': -14,
+        'z': 10,
+        'theta':np.pi,
+        'gripper' : 'false',
+    },
+    '9': {
+        'x': 0,
+        'y': -14,
+        'z': 1,
+        'theta':np.pi,
+        'gripper' : 'false',
+    },
+    '10': {
+        'x': 0,
+        'y': -14,
+        'z': 1,
+        'theta':np.pi,
+        'gripper' : 'true',
+    },
+    '11': {
+        'x': 0,
+        'y': -14,
+        'z': 10,
+        'theta':np.pi,
+        'gripper' : 'true',
+    },
+    '12': {
+        'x': 14,
+        'y': 0,
+        'z': 10,
+        'theta':np.pi,
+        'gripper' : 'true',
+    },
+    '13': {
+        'x': 14,
+        'y': 0,
+        'z': 4,
+        'theta':np.pi,
+        'gripper' : 'true',
+    },
+    '14': {
+        'x': 14,
+        'y': 0,
+        'z': 4,
+        'theta':np.pi,
+        'gripper' : 'false',
+    },
+}
+
 l = [145, 107, 107, 85]
 
 
