@@ -1,42 +1,41 @@
 #!/usr/bin/env python3
 
 import rospy
-from sensor_msgs.msg import JointState
+from geometry_msgs.msg import Twist
 
 import os, sys
-import numpy as np
 from py_console import console, bgColor, textColor
 from pynput.keyboard import Key, Listener
 
 SELECTED_COORDINATE = 0
 COORDINATES = {
-    'X': 0,
+    'X': 120,
     'Y': 100,
     'Z': 30,
-    'θ': 0,
+    'θ': 180,
 }
 LIMITS = {
     'X': {
-        'low': -100,
-        'high': 100,
+        'low': 0,
+        'high': 140,
         'step': 2,
         'unit': 'mm',
     },
     'Y': {
-        'low': 50,
-        'high': 150,
+        'low': -120,
+        'high': 120,
         'step': 2,
         'unit': 'mm',
     },
     'Z': {
         'low': 10,
-        'high': 50,
+        'high': 80,
         'step': 2,
         'unit': 'mm',
     },
     'θ': {
-        'low': -90,
-        'high': 90,
+        'low': 90,
+        'high': 180,
         'step': 2,
         'unit': 'deg',
     },
@@ -76,13 +75,15 @@ def updateSelectedValue(key):
 
 def publishMessage():
     # Define and fill message
-    state = JointState()
-    state.header.stamp = rospy.Time.now()
-    state.name = list(map(lambda s: s.replace(' ', ''), COORDINATES.keys()))
-    state.position = list(COORDINATES.values())
+    coordinates = list(COORDINATES.values())
+    pose = Twist()
+    pose.linear.x = coordinates[0]
+    pose.linear.y = coordinates[1]
+    pose.linear.z = coordinates[2]
+    pose.angular.z = coordinates[3]
     # Create publisher and publish message
-    pub = rospy.Publisher('/joint_states', JointState, queue_size=0)
-    pub.publish(state)
+    pub = rospy.Publisher('/effector_pose', Twist, queue_size=0)
+    pub.publish(pose)
 
 def keyPressed(key):
     # Seek events
