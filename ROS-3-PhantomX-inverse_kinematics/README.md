@@ -21,12 +21,20 @@ La forma más utilizada para calcular la cinemática inversa de manipuladores se
 
 ## Articulación 1
 
-Esta articulación es la mas sencilla de obtener, Ya que, al tener la posición del efector final, se puede utilizar sus coordenadas en X y Y de la siguiente manera:
+<img src="../assets/q1.png" margin='auto' width="500" height="400">
 
+Esta articulación es la mas sencilla de obtener, Ya que, como se puede apreciar en figura anterior, al tener la posición del efector final, se puede utilizar sus coordenadas en X y Y de la siguiente manera:
+
+
+```
 θ1 = atan (py/px)
 
 ```
 
-<img src="assets/q1.png" margin='auto' width="500" height="400">
+## Desacople de muñeca
 
-```
+<img src="../assets/invpxef.png" margin='auto' width="500" height="400">
+
+<img src="../assets/invkinpx2.png" margin='auto' width="500" height="400">
+
+<img src="../assets/workSpacePX.png" margin='auto' width="500" height="400">
