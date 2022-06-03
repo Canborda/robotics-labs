@@ -107,6 +107,7 @@ POSITION = {
 
 L = [145, 107, 107, 85]
 
+
 def inverseKinematics(x, y, z, theta):
     rz = trotz(math.atan2(y, x))
     ry = troty(theta)
@@ -124,15 +125,18 @@ def inverseKinematics(x, y, z, theta):
         q[0] = math.atan2(th[1, 3], th[0, 3])
 
         w = th[0:3, 3] - L[3]*th[0:3, 2]  # Desacople de muñeca:
-        h = round(w[2] - L[0], 3)
-        r = round(math.sqrt(w[0]*w[0] + w[1]*w[1]), 3)
+        h = w[2] - L[0]
+        r = math.sqrt(w[0]**2 + w[2]**2)
 
-        q[2] = - \
-            math.acos(round(((r*r)+(h*h)-L[1]**2-L[2]**2)/(2*L[1]*L[2]), 3))
-        q[1] = math.atan2(h, r) + math.atan2(L[2]*math.sin(q[2]), L[1] +
-                                             L[2]*math.cos(q[2])) # Articulaciónes en radianes
-        q[3] = math.atan2(th[2, 2], math.sqrt(
-            (th[0, 2]*th[0, 2]) + (th[1, 2]*th[1, 2]))) - math.pi/2 - q[1] - q[2]
+        q[2] = -math.acos((r**2 + h**2 - L[1]**2 - L[2]**2) / (2*L[1]*L[2]))
+
+        beta = math.atan2(L[2]*math.sin(q[2]), L[1] + L[2]*math.cos(q[2]))
+
+        q[1] = math.atan2(h, w[0]) - beta # -beta para codo arriba
+
+        q[3] = np.pi/2 - theta - q[1] - q[2]
+
+        # q[3] = math.atan2(th[2, 2], math.sqrt((th[0, 2]*th[0, 2]) + (th[1, 2]*th[1, 2]))) - math.pi/2 - q[1] - q[2]
         # k1 = math.atan2(h, r)
         # k2 = math.atan2(l[2]*math.sin(q[2]), l[1]+l[2]*math.cos(q[2]))
 
@@ -147,10 +151,10 @@ def inverseKinematics(x, y, z, theta):
         return False, q
 
 
-_, ang = inverseKinematics(120, 120, 30, np.pi)
+# _, ang = inverseKinematics(120, 120, 30, np.pi)
 
-print(ang)
-print(ang*180/np.pi)
+# print(ang)
+# print(ang*180/np.pi)
 
 
 def intervalo(x1, x2, step1):
