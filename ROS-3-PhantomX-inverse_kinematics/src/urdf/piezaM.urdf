@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="piezaM">
+
+  <link name="world"></link>
+
+  <link name="base_link">
+    <visual name="">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://robotics_lab3/src/meshes/piezaM.STL" scale="1 1 1"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://robotics_lab3/src/meshes/piezaM.STL" scale="1 1 1"/>
+      </geometry>
+      <material name="purpure">
+        <color rgba="0.5 0.6 0 1.0"/>
+      </material>
+    </collision>
