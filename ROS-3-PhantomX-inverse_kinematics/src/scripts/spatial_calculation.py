@@ -132,7 +132,7 @@ def inverseKinematics(x, y, z, theta):
 
         beta = math.atan2(L[2]*math.sin(q[2]), L[1] + L[2]*math.cos(q[2]))
 
-        q[1] = math.atan2(h, w[0]) - beta # -beta para codo arriba
+        q[1] = math.atan2(w[2], w[0]) - beta # -beta para codo arriba
 
         q[3] = np.pi/2 - theta - q[1] - q[2]
 

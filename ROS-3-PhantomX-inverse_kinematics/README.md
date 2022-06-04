@@ -68,7 +68,7 @@ p_z
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi mathvariant="italic">w</mi><mo>=</mo><mrow><mo>[</mo><mtable columnalign="center"><mtr><mtd><mrow><msub><mrow><mi mathvariant="italic">p</mi></mrow><mrow><mi mathvariant="italic">x</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mrow><mi mathvariant="italic">p</mi></mrow><mrow><mi mathvariant="italic">y</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mrow><mi mathvariant="italic">p</mi></mrow><mrow><mi mathvariant="italic">z</mi></mrow></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>-</mo><mi mathvariant="normal">L4</mi><mrow><mo>[</mo><mtable columnalign="center"><mtr><mtd><mrow><mi mathvariant="normal">zx</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">zy</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">zz</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnalign="center"><mtr><mtd><mrow><mi mathvariant="normal">wx</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">wy</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">wz</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
 
 
-<img src="/assets/invpxef.png" margin='auto' width="500" height="400">
+<img src="/assets/invpxw.png" margin='auto' width="500" height="400">
 
 Ya con las coordenadas de la articulación de la muñeca se puede proceder a hallar q2 y q3.
 
