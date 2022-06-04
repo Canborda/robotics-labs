@@ -37,14 +37,14 @@ Con el fin de simplificar el sistema y así lograr un desarrollo mas sencillo de
 básicamente lo que se debe hacer es hallar las coordenadas de la articulación 4 (j4), la cual corresponde a la muñeca del PhantomX. 
 <br>
 Ya que tenemos las coordenadas del efector final y por ende tenemos la MTH del mismo, la cual resulta ser:
-```
+
 $T=\left\lbrack \begin{array}{cccc}
 \mathrm{xx} & \mathrm{yx} & \mathrm{zx} & p_x \\
 \mathrm{xy} & \mathrm{yy} & \mathrm{zy} & p_y \\
 \mathrm{xz} & \mathrm{yz} & \mathrm{zz} & p_z \\
 0 & 0 & 0 & 1
 \end{array}\right\rbrack$
-```
+
 
 es posible hallar la posición de la muñeca (w), mediante la siguiente ecuación:
 
@@ -102,3 +102,8 @@ Bien, ahora esta completa la cinemática inversa de nuestro Phantom X.
 En la siguiente figura se puede apreciar el espacio de trabajo del robot Phantom X.
 
 <img src="/assets/workSpacePX.png" margin='auto' width="500" height="400">
+
+## Demostración
+
+![controller mode package demonstration](./assets/IKPhantomX.gif)
+[Watch full video here](https://youtu.be/Qg1i_FicRYc)
