@@ -24,10 +24,8 @@ The final tool has the following properties:
 
 ---
 # Tool Calibration
-- Procedimiento
-- GIF con 4 posiciones
-- Medidas con calibracion vs. medidas con modelo
 
+The calibration process starts by fixing the tool on the mounting flange with four screws. Next, using the jogging function and the joystick, the TCP (Tool Center Point) must be matched with an external pointed tool in four different configurations of the robot. Once all four positions have been achieved the robot controller will calculate with inverse kinematics the TCP frame offset with respect to the `tool0` frame. The program also shows the error found in the calculation.
 
 > - __Position__: $\{ x=-1.14511, y=-2.77919, z=147.51\}$
 > - __Error__: $\{max=1.1265782\text{ mm}, min=0.3530322\text{ mm}, mean=0.6549213\text{ mm}\}$
@@ -60,4 +58,10 @@ https://user-images.githubusercontent.com/55401093/188254255-55779791-179b-4d6a-
 
 ---
 # Conclusions
-- 
+
+- Performing a simulation before the real robot implementation allows to solve problems and prevents dangerous situations for both robot and humans. It also helps to study the paths and obtain more complex and more accurate results by simplifying the path planning task and helping with all math inside.
+- In the tool design it is important to acknowledge the requirements and limitations of the robot and thus avoid any damage. A tool must only be used in the task it was designed for.
+- The precision on the calibration depends mostly on how well defined is the origin of the TCP, in this case, the wide shape of the marker tip made very difficult to find the exact point and that led to a bigger calibration error.
+- About the work object calibration, the selection of the calibration points is very important because this will define how hard will be for the robot to follow the path using simple poses and sometimes a point can't be reached by the TCP.
+
+---
