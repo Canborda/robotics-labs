@@ -1,6 +1,10 @@
 # robotics-abbIRB140
 Repositoty for practices with an industrial robot model ABB IRB140
 
+> ## Contributors
+> 
+> - [Camilo Andrés Borda Gil](https://github.com/Canborda) (caabordagi@unal.edu.co)
+> - [Brian Camilo Saiz Cavanzo](https://github.com/briansaiz) (brcsaizca@unal.edu.co)
 
 ---
 # Tool Design
@@ -55,6 +59,8 @@ https://user-images.githubusercontent.com/55401093/188253709-890514b5-370a-47eb-
 # Demonstration
 
 https://user-images.githubusercontent.com/55401093/188254255-55779791-179b-4d6a-8675-2d9d4596900a.mp4
+
+https://user-images.githubusercontent.com/55401093/188256259-78a9372b-4661-4763-ac9e-4cb798e6ed9c.mp4
 
 ---
 # Conclusions
