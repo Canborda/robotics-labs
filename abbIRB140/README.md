@@ -49,9 +49,12 @@ Before any application on an industrial robot, it's mandatory to simulate the pr
 5. Create subroutine on RAPID code by calling the different PROCEDURES into the `main()` function. RobotStudio will create the constants for every targed used in the different paths and will also write every path as an isolated procedure. The final RAPID code is available inside the [/code](./code/Module1.mod) folder.
 <p align="center"><img height=250 src="./assets/simulation5.png" alt="station with robot, tool and work object" /></p>
 
+https://user-images.githubusercontent.com/55401093/188253709-890514b5-370a-47eb-8e7b-e0c88d74943e.mp4
+
 ---
 # Demonstration
-- Video (Calibracion + RobotStudio + Real)
+
+https://user-images.githubusercontent.com/55401093/188254255-55779791-179b-4d6a-8675-2d9d4596900a.mp4
 
 ---
 # Conclusions
