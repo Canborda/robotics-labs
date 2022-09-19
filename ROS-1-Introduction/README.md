@@ -34,7 +34,10 @@ And that's it ! now you should have running two nodes:
 ROS noetic has a builted-in demo package called [turtlesim](http://wiki.ros.org/turtlesim) that starts a node with a visualization window and is subscribed to a different topics in order to move the turtle on it.
 
 The topics used for this package were:
-- `/turtle1/cmd_vel`: to control the linear and angular velocity
+- `/turtle1/cmd_vel`: to control the linear and angular velocity.
+- `/turtle1/pose`: to monitor turtle's position.
+
+Also we used two services:
 - `/turtle1/teleport_absolute`: to re-spawn the turtle on the initial point.
 - `/turtle1/teleport_relative`: to rotate the turtle 180 degrees with respect to its current position.
 
@@ -48,7 +51,7 @@ The presented solution uses the keyboard listener of the [pynput library](https:
 - For angular velicity `A`/`D` keys increase or decrease the value with a rate of 1, and the limit value is 10 (clockwise or counterclockwise).
 
 ### Demostration
-https://user-images.githubusercontent.com/55401093/191136557-636f5c2e-2993-464d-b20d-223aa2787137.mp4
+https://user-images.githubusercontent.com/55401093/191137875-15a3ff69-3865-4207-b675-7f48ea83b848.mp4
 
 
 ## Conexión Ros con Matlab
