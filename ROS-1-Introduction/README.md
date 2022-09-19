@@ -24,12 +24,34 @@ Now just launch the package with the following command:
 roslaunch robotics-ros-1-introduction turtle.launch
 ```
 And that's it ! now you should have running two nodes:
-- `/turtle_simulation`: 
-- `/teleop_keyboard`:
+- `/turtle_simulation`: visualization of the __tustlesim__ package.
+- `/teleop_keyboard`: node that publishes the linear and angular velocity or teleports to the __turtlesim__ topics, when the corresponding keys are pressed.
+
 
 ---
+# The Turtlesim Package
 
-## Procedimiento 
+ROS noetic has a builted-in demo package called [turtlesim](http://wiki.ros.org/turtlesim) that starts a node with a visualization window and is subscribed to a different topics in order to move the turtle on it.
+
+The topics used for this package were:
+- `/turtle1/cmd_vel`: to control the linear and angular velocity
+- `/turtle1/teleport_absolute`: to re-spawn the turtle on the initial point.
+- `/turtle1/teleport_relative`: to rotate the turtle 180 degrees with respect to its current position.
+
+
+---
+# ROS on Python
+
+The presented solution uses the keyboard listener of the [pynput library](https://pynput.readthedocs.io/en/latest/keyboard.html#monitoring-the-keyboard) to listen for the keys: `W`, `A`, `S`, `D`, `R` and `Space`, and depending on the pressed key publishes a message on the corresponding topic.
+
+- For linear velocity `W`/`S` keys increase or decrease the value with a rate of 1, and the limit value is 10 (forward or backward).
+- For angular velicity `A`/`D` keys increase or decrease the value with a rate of 1, and the limit value is 10 (clockwise or counterclockwise).
+
+### Demostration
+
+
+
+
 ## Conexión Ros con Matlab
 
 - Con Linux operando lanzar 2 terminales. En la primera terminal escribir el comando roscore
@@ -77,43 +99,6 @@ rosshutdown;
 ```
 Esto es necesario por que matlab solo puede tener un nodo instanciado a la vez.
 
-## Conexión Ros con Python
-
-- En el paquete hello turtle de ROS, en la carpeta de scripts, crear un script de Python y escribir un código que permita operar una tortuga del paquete turtlesim con el teclado, que
-cumpla con las siguientes especificaciones:
-
-    -  Se debe mover hacia adelante y hacia atrás con las teclas W y S
-    -  Debe girar en sentido horario y antihorario con las teclas D y A.
-    -  Debe retornar a su posición y orientación centrales con la tecla R
-    -  Debe dar un giro de 180° con la tecla ESPACIO
-
-<br>
-
-- Lanzar una terminal, dirigirse al directorio del workspace de catkin y escribir el comando
-catkin make para hacer build en el paquete modificado.
-- Con Linux operando lanzar 3 terminales. En la primera terminal escribir el comando roscore
-para iniciar el nodo maestro.
-- En la segunda terminal escribir rosrun turtlesim turtlesim node.
-- En la tercera terminal dirigirse al directorio que contiene el workspace de catkin y escribir
-source devel/setup.bash. Acto seguido escribir rosrun hello turtle turtle_TeleopKey.py. 
-
-
-<img src="images/console2.png" margin='auto' width="400" height="500">
-
-<br>
-En este punto, la terminal ya deberı́a estar esperando el ingreso de teclas.
-<br>
-
-<img src="images/tortuga2.png" margin='auto' width="400" height="400">
-
-- Observar el movimiento de la tortuga con las teclas A, S, W y D, ası́ como los cambios en la
-posición instantáneos con las teclas R y ESPACIO.
-
-<img src="images/tortuga3.png" margin='auto' width="400" height="400">
-
-
-
-<img src="images/rqt1.png" margin='auto' width="500" height="400">
 
 ## Conclusiones:
 
