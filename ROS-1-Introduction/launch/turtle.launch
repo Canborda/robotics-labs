@@ -9,7 +9,7 @@
 
   <!-- Teleop keys node -->
   <node
-    pkg="robotics_lab1"
+    pkg="robotics-ros-1-introduction"
     name="teleop_keyboard"
     type="turtle_teleop.py"
     output="screen">
