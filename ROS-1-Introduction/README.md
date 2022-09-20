@@ -50,62 +50,37 @@ The presented solution uses the keyboard listener of the [pynput library](https:
 - For linear velocity `W`/`S` keys increase or decrease the value with a rate of 1, and the limit value is 10 (forward or backward).
 - For angular velicity `A`/`D` keys increase or decrease the value with a rate of 1, and the limit value is 10 (clockwise or counterclockwise).
 
+When the `/teleop_keyboard` node is publishing messages, the ROS graph looks like this (the node with the long name is a temporary node created with the `rostopic echo /turtle1/pose` command to monitor the turtle pose):
+
+<p align="center"><img src="images/graph_python.png" height="250" alt="ros graph"></p>
+
 ### Demostration
-https://user-images.githubusercontent.com/55401093/191137875-15a3ff69-3865-4207-b675-7f48ea83b848.mp4
+https://user-images.githubusercontent.com/55401093/191138347-6409a2b8-c60f-417a-9f12-91d48614543e.mp4
 
 
-## Conexión Ros con Matlab
+---
+# ROS on Matlab
 
-- Con Linux operando lanzar 2 terminales. En la primera terminal escribir el comando roscore
-para iniciar el nodo maestro, en la segunda terminal escribir rosrun turtlesim turtlesim node, en este momento aparece la Tortuga tal y como se muestra en la siguiente imagen.
+The [Matlab ROS Toolbox](https://www.mathworks.com/help/ros/ug/get-started-with-ros.html) allows to use ROS on a "easier" (less code) way, also to work alongside with all matlab tools. For this we developed two scripts:
+- [rospublisher](./matlab_script/rospublisher.m) is a simple publisher that shows how to send a message to a ROS topic from Matlab.
+- [poseSubs](./matlab_script/poseSubs.m) is a simple subscriber that also plots the turtle position in a matlab figure.
 
-<img src="images/console1.png" margin='auto' width="500" height="400">
+In this alternative Matlab creates his own node to communicate with all other ROS running nodes, then the resulting graph looks like this:
 
-A continuación se procede a lanzar una instancia de Matlab y se creo el script poseSub.m.
+<p align="center"><img src="images/graph_matlab.png" height="250" alt="ros graph with matlab"></p>
 
-<img src="images/mat1.png" margin='auto' width="500" height="400">
+[PASTE DEMONSTRATION VIDEO HERE]
 
+From matlab is also possible to `echo` a topic in order to read its messages:
+<p align="center"><img src="images/matlab_subscriber.png" height="500" alt="matlab subscriber"></p>
 
-Al correr la primera sección nos hemos conectado al modo maestro de ROS, lo cual queda evidenciado con el siguiente mensaje en command Window de Matlab.
+---
+# Conclusions:
 
-```
-The value of the ROS_MASTER_URI environment variable, http://localhost:11311, will be used to connect to the ROS master.
-Initializing global node /matlab_global_node_73140 with NodeURI http://eladark-Katana-GF66-11UC:39157/ and MasterURI http://localhost:11311.
-```
-Tras correr la segunda sección se puede apreciar la creación del Publisher y el Message, de la siguiente manera. 
+- The main advantage of using ROS is the communication between different software and hardware devices with an integrated environment, thus is easier to build more complex robotics systems on a wide variety of applications. 
 
-<img src="images/var1.png" margin='auto' width="500" height="200">
+- ROS is an open source tool, so it comes up with a huge community and online support, where it keeps growing and solving more issues. Also is well documented.
 
-Para finalizar se ejecuta la tercera y ultima sección del script, la cual activa el nodo Publisher, el cual envia el mensaje de velocidad lineal en x = 1, al topico /turtle1/cmd_vel, generando el siguiente comportamiento en nuestra tortuga. 
+- Matlab connection with ROS can simplify some processes and allows to use any matlab tool, however it is important to mention that Matlab is not a free software and sometimes people do not understand enterelly what is really happening in the system.
 
-<img src="images/tortuga1.png" margin='auto' width="500" height="400">
-
-
-
-- A continuación se crea un script en Matlab llamado poseSubs.m, que permite suscribirse al tópico de pose de la simulación de turtle1.
-
-<img src="images/mat2.png" margin='auto' width="500" height="400">
-
-A modo de verificación se ejecuta el comando rqt_graph en la terminal, donde se obtiene el siguente grafico, el cual nos muestra como el nodo publica al topico /turtle1/pose, un tipo Pose, simultaneamente el nodo creado por matlab se suscribe al mismo topico para recibir el mensaje.
-
-<img src="images/rqt2.png" margin='auto' width="500" height="400">
-
-sin embargo, mas adelante se puede apreciar que el script poseSub.m es alterado buscando nuevas funcionalidades.
-
-- Ahora se busca Crear un script en Matlab que permita enviar todos los valores asociados a la pose de turtle1.
-
-- Consultando la manera en qué se finaliza el nodo maestro en Matlab se halló que esta acción se realiza mediante el comando:
-
-```matlab
-rosshutdown;
-```
-Esto es necesario por que matlab solo puede tener un nodo instanciado a la vez.
-
-
-## Conclusiones:
-
-- La principal ventaja de ROS se encuentra en permite una amplia integración entre diferentes sistemas y aplicaciones, lo que permite formar elaborados mecanismos roboticos con amplia variedad de ocupaciones. 
-
-- Ros al ser un framework de codigo abierto se convierte de una gran comunidad de desarrolladores, que a tambien nutren el sistema con una gran variedad de librerias y repositorios no oficiales.
-
-- Ros cuenta con una amplia documentación que permite desembolverse practicamente ante cualquier problema.
+---

@@ -1,15 +1,16 @@
-%% Reiniciar nodo maestro
+%% Relaunch roscore
 rosshutdown;
 rosinit;
-%% Crear suscriptor
+%% Subscriber declaration
 posSub = rossubscriber("/turtle1/pose","turtlesim/Pose");
 pause(1);
 % rostopic list
 % [msg2,status,statustext] = receive(posSub,10);
 
-%% Obtener mensaje y graficar pose
-% posSub.LatestMessage.X
+%% Read a message from a topic
+posSub.LatestMessage.X
 
+%% Plot the given position
 close all;
 figure();
 hold on;
