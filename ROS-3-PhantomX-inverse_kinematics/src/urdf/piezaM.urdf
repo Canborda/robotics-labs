@@ -7,7 +7,7 @@
     <visual name="">
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://robotics_lab3/src/meshes/piezaM.STL" scale="1 1 1"/>
+        <mesh filename="package://robotics-ros-3-phantomx-inverse_kinematics/src/meshes/piezaM.STL" scale="1 1 1"/>
       </geometry>
       <material name="blue">
         <color rgba="0 0 1 1.0"/>
@@ -16,7 +16,7 @@
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://robotics_lab3/src/meshes/piezaM.STL" scale="1 1 1"/>
+        <mesh filename="package://robotics-ros-3-phantomx-inverse_kinematics/src/meshes/piezaM.STL" scale="1 1 1"/>
       </geometry>
       <material name="purpure">
         <color rgba="0.5 0.6 0 1.0"/>

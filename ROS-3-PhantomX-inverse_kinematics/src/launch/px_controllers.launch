@@ -7,7 +7,7 @@
   <arg name="use_joint_state"         default="true"/>
   <arg name="use_cmd_vel"             default="false"/>
 
-  <param name="dynamixel_info"          value="$(find robotics_lab3)/src/config/joints.yaml"/>
+  <param name="dynamixel_info"          value="$(find robotics-ros-3-phantomx-inverse_kinematics)/src/config/joints.yaml"/>
 
   <!-- Dynamixel controller for PhantomX robot -->
   <node name="$(arg namespace)" pkg="dynamixel_workbench_controllers" type="dynamixel_workbench_controllers"
@@ -28,7 +28,7 @@
 
   <!-- Joints translator node -->
   <node
-    pkg="robotics_lab3"
+    pkg="robotics-ros-3-phantomx-inverse_kinematics"
     name="translator_node"
     type="px_translatepos.py"
     output="screen">
@@ -36,7 +36,7 @@
 
   <!-- Inverse kinematics node -->
   <node
-    pkg="robotics_lab3"
+    pkg="robotics-ros-3-phantomx-inverse_kinematics"
     name="inverse_kinematics_node"
     type="px_invkin.py"
     output="screen">
@@ -44,7 +44,7 @@
 
   <!-- Teleop keys node -->
   <node
-    pkg="robotics_lab3"
+    pkg="robotics-ros-3-phantomx-inverse_kinematics"
     name="keyop_node"
     type="px_keyop_invkin.py"
     output="screen">
@@ -52,8 +52,8 @@
 
   <!-- RVIZ -->
 
-  <arg name="model" default="$(find robotics_lab3)/src/urdf/px_collision.urdf"/>
-  <arg name="rvizconfig" default="$(find robotics_lab3)/src/config/config.rviz"/>
+  <arg name="model" default="$(find robotics-ros-3-phantomx-inverse_kinematics)/src/urdf/px_collision.urdf"/>
+  <arg name="rvizconfig" default="$(find robotics-ros-3-phantomx-inverse_kinematics)/src/config/config.rviz"/>
 
   <!-- Load robot -->
   <param name="robot_description" command="$(find xacro)/xacro $(arg model)"/>
