@@ -1,14 +1,6 @@
-## robotics-ros-2-phantomx-forward_kinematics
+# ROS – PhantomX Forward Kinematics
 
-# KEYOP PHANTOMX ROBOT WITH ROS
-
-This repository shows how to connect and operate via keyboard a Phantom X robot with ROS.
-
-> ## Contributors
-> 
-> - [Camilo Andrés Borda Gil](https://github.com/Canborda) (caabordagi@unal.edu.co)
-> - Paula Sofía Medina Diaz (psmedinadi@unal.edu.co)
-> - Robinson Jair Orduz Gomez (rjorduzg@unal.edu.co)
+Keyboard teleoperation of a PhantomX Pincher robot using ROS, with forward kinematics modeled via DH parameters. Supports both real-robot controller mode and Rviz simulation mode.
 
 ---
 ## How to Use the Package
@@ -30,7 +22,7 @@ To launch the package you have two modes: you can test it with a real [PhantomX 
 
 <br>
 
-### **Simulation Mode**
+### Simulation Mode
 
 <br>
 
@@ -48,7 +40,7 @@ https://github.com/Canborda/robotics-ROS-2-PhantomX-forward_kinematics/assets/55
 
 <br>
 
-### **Controller Mode**
+### Controller Mode
 
 <br>
 
@@ -69,22 +61,14 @@ The **rqt_graph** for the controller mode is the following:
 #### Demonstration
 https://github.com/Canborda/robotics-ROS-2-PhantomX-forward_kinematics/assets/55401093/40f4864a-cd97-4052-b25b-a71fba0bcf25
 
-<br>
-
 ---
-
-<br>
-
-## Procedimiento
+## Robot Setup
 
 <img src="assets/pxPose.jpeg" margin='auto' width="500">
 
-Establezca las longitudes de eslabón para cada articulación del robot Phantom X Pincher, para este proceso apóyese en un CALIBRADOR. Recuerde que la longitud de eslabón es la mínima distancia que conecta dos juntas consecutivas. Genere un diagrama como el presentado en la figura 2 con los datos medidos.
+Measure the link lengths for each joint of the PhantomX Pincher robot using a caliper. The link length is defined as the minimum distance connecting two consecutive joints.
 
-Análisis:
-
-- Con las dimensiones medidas obtenga los parámetros DHstd del robot Phantom X Pincher.
-- Genere diagrama del robot con las tablas de parámetros articulares.
+Obtain the standard DH parameters of the PhantomX Pincher from the measured dimensions:
 
 |     | ai  | alpha | di  | Theta | off  |
 | --- | --- | ----- | --- | ----- | ---- |
@@ -93,22 +77,17 @@ Análisis:
 | 3   | l3  | 0     | 0   | q3    | 0    |
 | 4   | l4  | 0     | 0   | q4    | 0    |
 
+With measured link lengths:
 
-<img src="assets/px1tr.png" margin='auto' width="500">
+|     | length (mm) |
+| --- | ----------- |
+| l1  | 140         |
+| l2  | 105         |
+| l3  | 105         |
+| l4  | 85          |
 
-Teniendo en cuenta que:
-
-
-|     | medida(mm) |
-| --- | ---------- |
-| l1  |    140     |
-| l2  |    105     |
-| l3  |    105     |
-| l4  |    85      |
-
-<br>
-
-## ToolBox:
+---
+## Toolbox
 
 <img src="assets/pxbgt.png" margin='auto' width="800">
 
@@ -145,3 +124,5 @@ q = [15, 60, 30, 10]
 q = [30, -15, 60, 60]
 
 <img src="assets/pxm3.png" margin='auto' width="500">
+
+---

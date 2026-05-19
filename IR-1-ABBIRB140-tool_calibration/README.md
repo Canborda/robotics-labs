@@ -1,10 +1,6 @@
-# robotics-abbIRB140
-Repositoty for practices with an industrial robot model ABB IRB140
+# ABB IRB140 – Drawing Tool
 
-> ## Contributors
-> 
-> - [Camilo Andrés Borda Gil](https://github.com/Canborda) (caabordagi@unal.edu.co)
-> - [Brian Camilo Saiz Cavanzo](https://github.com/briansaiz) (brcsaizca@unal.edu.co)
+Design and calibration of a custom drawing tool for the ABB IRB140 industrial robot, including path simulation in RobotStudio and real implementation on the physical robot.
 
 ---
 # Tool Design

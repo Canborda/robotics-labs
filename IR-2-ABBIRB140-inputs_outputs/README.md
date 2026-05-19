@@ -1,15 +1,11 @@
-# robotics-abbIRB140-IO
-Repositoty for practices with an industrial robot model ABB IRB140 using Digital Inputs &amp; Digital Outputs.
+# ABB IRB140 – Digital I/O
 
-> ## Contributors
-> 
-> - [Camilo Andrés Borda Gil](https://github.com/Canborda) (caabordagi@unal.edu.co)
-> - [Brian Camilo Saiz Cavanzo](https://github.com/briansaiz) (brcsaizca@unal.edu.co)
+Command robot paths using digital inputs and outputs on the ABB IRB140 with RAPID programming, building on the paths defined in the [Drawing Tool practice](../IR-1-ABBIRB140-tool_calibration).
 
 ---
 # Input/Output Definition
 
-The goal was to command different paths or sequences previously defined (on [this repository](https://github.com/Canborda/robotics-abbIRB140)) with the usage of __digital inputs__. In Robot Studio is possible to make simulation with "virtual" inputs & outputs, and in the physical laboratory we use industrial buttons to send a signal to the controller.
+The goal was to command different paths or sequences previously defined (on the [ABB IRB140 practice](../IR-1-ABBIRB140-tool_calibration)) with the usage of __digital inputs__. In Robot Studio is possible to make simulation with "virtual" inputs & outputs, and in the physical laboratory we use industrial buttons to send a signal to the controller.
 
 ### I/O in RobotStudio
 
